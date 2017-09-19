@@ -15,4 +15,30 @@ $(document).ready(function() {
 
     event.preventDefault();
   });
+
+  $("#palForm").submit(function(event) {
+    var palInput = $("input#pal").val();
+    var palArray = palInput.split("");
+
+    var reversePalArray = palArray.map(function(letter){
+      return letter
+    });
+
+    reversePalArray.reverse();
+
+    // var reversePalArray = palArray.reverse();
+
+    for ( index = 0; index < palArray.length; index++) {
+      if (reversePalArray[index] != palArray[index]) {
+        $("#notPalOutput").show();
+      } else {
+        $("#palOutput").show();
+        // alert(reversePalArray[index]);
+        // alert(palArray[index]);
+      }
+    }
+    event.preventDefault();
+
+
+  });
 });

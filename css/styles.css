@@ -1,3 +1,7 @@
 #output {
   padding: 10px;
 }
+
+#palOutput, #notPalOutput {
+  display: none;
+}
